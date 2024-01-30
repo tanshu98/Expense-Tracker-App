@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Tracker</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
     <div class="container">
-        <div class="expense-tracker">
-            <button class="add-money-btn">Add Money</button>
-            <span>Expense Tracker</span>
-            <button class="expense-tracker-btn"><i class="fa fa-plus"></i></button>
-        </div>
+      <div class="expense-tracker">
+        <button class="add-money-btn">Add Money</button>
+        <span>Expense Tracker</span>
+        <button class="expense-tracker-btn"><i class="fa fa-plus"></i></button>
+      </div>
 
-        <!-- Modal forms -->
-        <form id="add-salary" >
-            <button class="salary-close-btn">⨉</button>
-            <span>Enter your amount here</span>
-            <input id="total-money" type="text" placeholder="Enter your amount here">
-            <input class="submit" type="submit" value="SUBMIT">
-        </form>
-        <form id="add-transaction" >
-            <button class="btn-close">⨉</button>
-            <h3>New Transaction</h3>
-            <span>Enter your amount here</span>
-            <input class="enter-transaction" type="text" placeholder="Enter your amount here">
-            <span>Enter your transaction name</span>
-            <input class="enter-transaction-details" type="text" placeholder="Enter your reason for transaction">
-            <input class="submit" type="submit" value="SUBMIT">
-        </form>
-
-        <!-- <div class="salary-credited">
-            <span>salary</span>
-            <span>cr</span>
-            <span id="amount-added">0</span>
-        </div> -->
-        <!-- <div class="salary-discredited">
-            <span id="paid-item">paid</span>
-            <span>dr</span>
-            <span id="paid-amount">Amount Paid</span>
-        </div> -->
-
-        
-
-<div class="salary"></div>
-<div class="salary-spent"></div>
+      <!-- Modal forms -->
+      <form id="add-salary">
+        <button class="salary-close-btn">⨉</button>
+        <span>Enter your amount here</span>
+        <input
+          id="total-money"
+          type="number"
+          placeholder="Enter your amount here"
+        />
+        <input class="submit" type="submit" value="SUBMIT" />
+      </form>
+      <form id="add-transaction">
+        <button class="btn-close">⨉</button>
+        <h3>New Transaction</h3>
+        <span>Enter your amount here</span>
+        <input
+          class="enter-transaction"
+          type="number"
+          placeholder="Enter your amount here"
+        />
+        <span>Enter your transaction name</span>
+        <input
+          class="enter-transaction-details"
+          type="text"
+          placeholder="Enter your reason for transaction"
+        />
+        <input class="submit" type="submit" value="SUBMIT" />
+      </form>
     </div>
-
-
-</body>
-<script src="index.js"></script>
+  </body>
+  <script src="index.js"></script>
 </html>
