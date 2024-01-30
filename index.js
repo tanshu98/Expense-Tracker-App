@@ -12,7 +12,6 @@ let container = document.querySelector(".container");
 const addMoneyButton = document.querySelector(".add-money-btn");
 
 // let totalSalary = addMoneyButton.innerHTML;
-// console.log(totalSalary);
 const addSalaryForm = document.querySelector("#add-salary");
 const salaryCloseButton = document.querySelector(".salary-close-btn");
 
@@ -27,9 +26,7 @@ const transactionCloseButton = document.querySelector(".btn-close");
 const ExpenseTrackerBtn = document.querySelector(".expense-tracker-btn");
 
 const salaryCredited = document.querySelector(".salary-credited");
-console.log(salaryCredited);
 const salaryDiscredited = document.querySelector(".salary-discredited");
-console.log(salaryDiscredited);
 
 // ! Add Money Modal -
 // When the user clicks on addMoneyButton, open the modal
@@ -67,27 +64,17 @@ addSalaryForm.addEventListener("submit", function (e) {
   // Function for creating salary Div 
 
   createSalaryCreditedDiv();
-  console.log("After the createSalaryDiscredited!");
 
   // getting the input value from input filed
   let inputValue = Number(document.querySelector("input").value);
-  console.log(inputValue);
 
   if (!balance) {
-    console.log("inside this if block");
     addMoneyButton.innerHTML = inputValue;
-    console.log("inputValue", typeof inputValue);
     balance = Number(addMoneyButton.innerHTML); // Storing the value as global variable
-    console.log(typeof balance);
     income = balance;
-    console.log("income", income);
   } else if (balance > 0) {
-    console.log("inside this else block");
-    console.log("input", inputValue);
     income = inputValue;
-    console.log("income", income);
     balance = balance + income;
-    console.log(balance);
     addMoneyButton.innerHTML = balance;
   } else {
     alert("Pls enter a valid money amount 😁");
@@ -103,18 +90,15 @@ addSalaryForm.addEventListener("submit", function (e) {
   document.querySelector(`#id-${srCount}`).style.display = "flex";
 
   inputValue = "";
-  console.log(inputValue);
 });
 
 
 addTransactionForm.addEventListener("submit", function (e) {
   e.preventDefault();
   count ++;
-  console.log("Inside addTransactionForm submit event listener");
 
   // Call the createSalaryDiscreditedDiv() everytime user submits the addTransactionForm..
   createSalaryDiscreditedDiv();
-  console.log("After the createSalaryDiscredited!");
   // getting the input value from input filed
   let transactionValue = enterTransaction.value;
   let transactionDetailsValue = enterTransactionDetails.value;
